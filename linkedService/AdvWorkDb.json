@@ -1,0 +1,17 @@
+{
+	"name": "AdvWorkDb",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"server": "sqlserver1-avinash.database.windows.net",
+			"database": "avinashdb-1",
+			"encrypt": "mandatory",
+			"trustServerCertificate": false,
+			"authenticationType": "SQL",
+			"userName": "Avinash",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQERFNkMyQjM4LUE5OTYtNDUzMC1COTM0LTM2NzM1MEVFMzBBMV8zZTg5NThkNy05ODBiLTQxMTktOGQ3ZC1hMTkxOWQ5ODAzMWUiDQp9"
+		}
+	}
+}
