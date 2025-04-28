@@ -11,6 +11,12 @@
 		"BlobStorageForProducts_connectionString": {
 			"value": ""
 		},
+		"CustomersDb1_password": {
+			"value": ""
+		},
+		"CustomersBlobStorage_connectionString": {
+			"value": ""
+		},
 		"AdvWorkDb_properties_typeProperties_server": {
 			"value": "sqlserver1-avinash.database.windows.net"
 		},
@@ -18,6 +24,15 @@
 			"value": "avinashdb-1"
 		},
 		"AdvWorkDb_properties_typeProperties_userName": {
+			"value": "Avinash"
+		},
+		"CustomersDb1_properties_typeProperties_server": {
+			"value": "sqlserver1-avinash.database.windows.net"
+		},
+		"CustomersDb1_properties_typeProperties_database": {
+			"value": "avinashdb-1"
+		},
+		"CustomersDb1_properties_typeProperties_userName": {
 			"value": "Avinash"
 		},
 		"containerUri": {

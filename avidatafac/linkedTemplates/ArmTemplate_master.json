@@ -15,6 +15,14 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'BlobStorageForProducts'"
 		},
+		"CustomersDb1_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'CustomersDb1'"
+		},
+		"CustomersBlobStorage_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'CustomersBlobStorage'"
+		},
 		"AdvWorkDb_properties_typeProperties_server": {
 			"type": "string",
 			"defaultValue": "sqlserver1-avinash.database.windows.net"
@@ -24,6 +32,18 @@
 			"defaultValue": "avinashdb-1"
 		},
 		"AdvWorkDb_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "Avinash"
+		},
+		"CustomersDb1_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "sqlserver1-avinash.database.windows.net"
+		},
+		"CustomersDb1_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "avinashdb-1"
+		},
+		"CustomersDb1_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "Avinash"
 		},
@@ -60,6 +80,12 @@
 					"BlobStorageForProducts_connectionString": {
 						"value": "[parameters('BlobStorageForProducts_connectionString')]"
 					},
+					"CustomersDb1_password": {
+						"value": "[parameters('CustomersDb1_password')]"
+					},
+					"CustomersBlobStorage_connectionString": {
+						"value": "[parameters('CustomersBlobStorage_connectionString')]"
+					},
 					"AdvWorkDb_properties_typeProperties_server": {
 						"value": "[parameters('AdvWorkDb_properties_typeProperties_server')]"
 					},
@@ -68,6 +94,15 @@
 					},
 					"AdvWorkDb_properties_typeProperties_userName": {
 						"value": "[parameters('AdvWorkDb_properties_typeProperties_userName')]"
+					},
+					"CustomersDb1_properties_typeProperties_server": {
+						"value": "[parameters('CustomersDb1_properties_typeProperties_server')]"
+					},
+					"CustomersDb1_properties_typeProperties_database": {
+						"value": "[parameters('CustomersDb1_properties_typeProperties_database')]"
+					},
+					"CustomersDb1_properties_typeProperties_userName": {
+						"value": "[parameters('CustomersDb1_properties_typeProperties_userName')]"
 					}
 				}
 			},
