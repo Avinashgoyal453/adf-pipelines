@@ -4,6 +4,21 @@
 	"parameters": {
 		"factoryName": {
 			"value": "avidatafac"
+		},
+		"AdvWorkDb_password": {
+			"value": ""
+		},
+		"BlobStorageForProducts_connectionString": {
+			"value": ""
+		},
+		"AdvWorkDb_properties_typeProperties_server": {
+			"value": "sqlserver1-avinash.database.windows.net"
+		},
+		"AdvWorkDb_properties_typeProperties_database": {
+			"value": "avinashdb-1"
+		},
+		"AdvWorkDb_properties_typeProperties_userName": {
+			"value": "Avinash"
 		}
 	}
 }

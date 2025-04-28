@@ -7,6 +7,26 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "avidatafac"
 		},
+		"AdvWorkDb_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'AdvWorkDb'"
+		},
+		"BlobStorageForProducts_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'BlobStorageForProducts'"
+		},
+		"AdvWorkDb_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "sqlserver1-avinash.database.windows.net"
+		},
+		"AdvWorkDb_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "avinashdb-1"
+		},
+		"AdvWorkDb_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "Avinash"
+		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "URI to storage account containing linked ARM templates"
@@ -33,6 +53,21 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"AdvWorkDb_password": {
+						"value": "[parameters('AdvWorkDb_password')]"
+					},
+					"BlobStorageForProducts_connectionString": {
+						"value": "[parameters('BlobStorageForProducts_connectionString')]"
+					},
+					"AdvWorkDb_properties_typeProperties_server": {
+						"value": "[parameters('AdvWorkDb_properties_typeProperties_server')]"
+					},
+					"AdvWorkDb_properties_typeProperties_database": {
+						"value": "[parameters('AdvWorkDb_properties_typeProperties_database')]"
+					},
+					"AdvWorkDb_properties_typeProperties_userName": {
+						"value": "[parameters('AdvWorkDb_properties_typeProperties_userName')]"
 					}
 				}
 			},
