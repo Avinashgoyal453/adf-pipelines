@@ -1,0 +1,23 @@
+{
+	"name": "Customersblb",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "CustomersBlobStorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "CustomerList.csv",
+				"container": "customers"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
