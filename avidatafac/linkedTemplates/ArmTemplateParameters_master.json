@@ -17,6 +17,12 @@
 		"CustomersDb1_password": {
 			"value": ""
 		},
+		"TaxiTripDb_password": {
+			"value": ""
+		},
+		"ADLSTripData_accountKey": {
+			"value": ""
+		},
 		"AdvWorkDb_properties_typeProperties_server": {
 			"value": "sqlserver1-avinash.database.windows.net"
 		},
@@ -34,6 +40,18 @@
 		},
 		"CustomersDb1_properties_typeProperties_userName": {
 			"value": "Avinash"
+		},
+		"TaxiTripDb_properties_typeProperties_server": {
+			"value": "sqlserver1-avinash.database.windows.net"
+		},
+		"TaxiTripDb_properties_typeProperties_database": {
+			"value": "taxi-data"
+		},
+		"TaxiTripDb_properties_typeProperties_userName": {
+			"value": "Avinash"
+		},
+		"ADLSTripData_properties_typeProperties_url": {
+			"value": "https://saavinashadls.dfs.core.windows.net/"
 		},
 		"containerUri": {
 			"value": ""
