@@ -29,6 +29,9 @@
 		"ADLSGen2_accountKey": {
 			"value": ""
 		},
+		"FilpkartBlobStorage_connectionString": {
+			"value": ""
+		},
 		"ADLSTripData_properties_typeProperties_url": {
 			"value": "https://saavinashadls.dfs.core.windows.net/"
 		},
