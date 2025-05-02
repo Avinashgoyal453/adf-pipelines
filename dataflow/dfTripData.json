@@ -20,9 +20,29 @@
 				}
 			],
 			"sinks": [],
-			"transformations": [],
+			"transformations": [
+				{
+					"name": "join1"
+				}
+			],
 			"scriptLines": [
-				"source(allowSchemaDrift: true,",
+				"source(output(",
+				"          medallion as string,",
+				"          hack_license as string,",
+				"          vendor_id as string,",
+				"          rate_code as short,",
+				"          store_and_fwd_flag as boolean,",
+				"          pickup_datetime as timestamp,",
+				"          dropoff_datetime as timestamp,",
+				"          passenger_count as short,",
+				"          trip_time_in_secs as short,",
+				"          trip_distance as double,",
+				"          pickup_longitude as double,",
+				"          pickup_latitude as double,",
+				"          dropoff_longitude as double,",
+				"          dropoff_latitude as double",
+				"     ),",
+				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> TripDataCsv",
 				"source(output(",
@@ -44,7 +64,12 @@
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     isolationLevel: 'READ_UNCOMMITTED',",
-				"     format: 'table') ~> TripFaresTable"
+				"     format: 'table') ~> TripFaresTable",
+				"TripDataCsv join(ERROR_FUNCTION('') == ERROR_FUNCTION(''),",
+				"     joinType:'inner',",
+				"     matchType:'exact',",
+				"     ignoreSpaces: false,",
+				"     broadcast: 'auto')~> join1"
 			]
 		}
 	}
