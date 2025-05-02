@@ -5,6 +5,9 @@
 		"factoryName": {
 			"value": "avidatafac"
 		},
+		"ADLSTripData_accountKey": {
+			"value": ""
+		},
 		"AdvWorkDb_password": {
 			"value": ""
 		},
@@ -20,8 +23,11 @@
 		"TaxiTripDb_password": {
 			"value": ""
 		},
-		"ADLSTripData_accountKey": {
+		"TripAggregateBlob_connectionString": {
 			"value": ""
+		},
+		"ADLSTripData_properties_typeProperties_url": {
+			"value": "https://saavinashadls.dfs.core.windows.net/"
 		},
 		"AdvWorkDb_properties_typeProperties_server": {
 			"value": "sqlserver1-avinash.database.windows.net"
@@ -49,9 +55,6 @@
 		},
 		"TaxiTripDb_properties_typeProperties_userName": {
 			"value": "Avinash"
-		},
-		"ADLSTripData_properties_typeProperties_url": {
-			"value": "https://saavinashadls.dfs.core.windows.net/"
 		}
 	}
 }
