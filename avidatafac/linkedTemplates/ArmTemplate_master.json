@@ -35,6 +35,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'TripAggregateBlob'"
 		},
+		"ADLSGen2_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ADLSGen2'"
+		},
 		"ADLSTripData_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://saavinashadls.dfs.core.windows.net/"
@@ -74,6 +78,10 @@
 		"TaxiTripDb_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "Avinash"
+		},
+		"ADLSGen2_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://saavinashadls.dfs.core.windows.net/"
 		},
 		"containerUri": {
 			"type": "string",
@@ -123,6 +131,9 @@
 					"TripAggregateBlob_connectionString": {
 						"value": "[parameters('TripAggregateBlob_connectionString')]"
 					},
+					"ADLSGen2_accountKey": {
+						"value": "[parameters('ADLSGen2_accountKey')]"
+					},
 					"ADLSTripData_properties_typeProperties_url": {
 						"value": "[parameters('ADLSTripData_properties_typeProperties_url')]"
 					},
@@ -152,10 +163,33 @@
 					},
 					"TaxiTripDb_properties_typeProperties_userName": {
 						"value": "[parameters('TaxiTripDb_properties_typeProperties_userName')]"
+					},
+					"ADLSGen2_properties_typeProperties_url": {
+						"value": "[parameters('ADLSGen2_properties_typeProperties_url')]"
 					}
 				}
 			},
 			"dependsOn": []
+		},
+		{
+			"name": "avidatafac_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'avidatafac_ArmTemplate_0')]"
+			]
 		}
 	]
 }

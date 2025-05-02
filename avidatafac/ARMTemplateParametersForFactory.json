@@ -26,6 +26,9 @@
 		"TripAggregateBlob_connectionString": {
 			"value": ""
 		},
+		"ADLSGen2_accountKey": {
+			"value": ""
+		},
 		"ADLSTripData_properties_typeProperties_url": {
 			"value": "https://saavinashadls.dfs.core.windows.net/"
 		},
@@ -55,6 +58,9 @@
 		},
 		"TaxiTripDb_properties_typeProperties_userName": {
 			"value": "Avinash"
+		},
+		"ADLSGen2_properties_typeProperties_url": {
+			"value": "https://saavinashadls.dfs.core.windows.net/"
 		}
 	}
 }
